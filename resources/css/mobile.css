@@ -3,6 +3,9 @@
 @media only screen and (max-width: 1368px) {}
 
 @media only screen and (max-width: 1068px) {
+    .projects-grid a {
+        width: 48.5%;
+    }
     .services__cards {
         gap: 20px;
     }
@@ -13,7 +16,7 @@
 
     .form-person {
         position: absolute;
-        top: 3%;
+        top: 3%; display: none;
         right: -12%;
         z-index: 1;
     }
@@ -38,6 +41,21 @@
 }
 
 @media only screen and (max-width: 968px) {
+    .project-header {
+        display: flex
+    ;
+    gap:20px;
+    }
+    .section-body_prorab {
+
+        background-size: cover;
+        background-position: 90% 100%;
+    }
+    .page .section-body {
+     
+        background-size: cover;
+        background-position: 55% 100%;
+    }
     .footer__body__uls ul:nth-child(4) {
         text-align: left;
     }
@@ -78,6 +96,7 @@
 
     .form-person-three {
         position: relative;
+        display: none;
         top: 0%;
         right: 0%;
         z-index: 1;
@@ -90,7 +109,7 @@
     }
     .form-person-five {
         position: relative;
-        top: 0%;
+        top: 0%; display: none;
         right: 0%;
         z-index: 1;
     }
@@ -140,9 +159,80 @@
     
         overflow: hidden;
     }
+    .section-body_infocards {
+        display: flex
+;
+        padding-top: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+      
+    }
+    .form-send {
+
+background-size: cover;
+
+background-position: 20% 100%;
+
+}
+    
+    .form-send-two {
+        background-size: cover;
+        background-position: 30% 100%;
+        background-image: url("http://127.0.0.1:5173/resources/img/form-one-two.png") !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .project-meta.wow.fadeInDown {
+        display: flex
+    ;
+        padding-top: var(--p20);
+        padding-bottom: 0;
+        gap: var(--p10);
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .project-main-image {
+        width: 100%;
+    }
+    .project-header__title {
+        width: 100%;
+    }
+    .project-header {
+        display: flex;
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
+    .projects .title {
+        padding-top: 130px;
+    }
+    .projects-grid a {
+        width: 100%;
+    }
+    .avtor .section-body-page__buttons {
+
+        padding-bottom: 30px; }
+    :root {
+      
+        --radius-two: 9px 55px;
+       
+    }
+    .services__cards {
+        gap: 40px;
+    }
+    section#avtor {
+        padding-top: 40px;
+    }
+    section.gallery {
+        padding: 15px 0px;
+    }
+    .section-body-advantages {
+
+        padding-bottom: 15px;
+    }
+    section#info {
+        padding-top: 0px;
+    }
     .title {
         padding-bottom: 30px;
     }
@@ -179,12 +269,13 @@
     }
 
     section#form {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .form-send.form-send-three {
-        min-height: 300px;
+        min-height: 500px;
+        padding: 0px var(--p20) 0 var(--p20);
     }
 
     .form-person-three img:nth-child(1) {
@@ -203,8 +294,8 @@
         font-family: Onest;
         font-weight: 800;
         padding-bottom: 20px;
-        font-size: 28px;
-        line-height: 38px;
+        font-size: 33px;
+        line-height: 39px;
         text-align: center;
         text-transform: uppercase;
     }
@@ -229,11 +320,34 @@
 
     .form-send {
         padding: 70px var(--p20) 0 var(--p20);
+        min-height: 500px;
+        padding: 20px var(--p20) 20px var(--p20);
+        
+        
+        
+        
+        
+        
+        
+        
+        .form-send.form-send-three {
+        min-height: 500px;
+        padding: 0px var(--p20) 0 var(--p20);
+    };
+        .form-send.form-send-three {
+        min-height: 500px;
+        padding: 0px var(--p20) 0 var(--p20);
+    };
+        
+    .form-send.form-send-three {
+        min-height: 500px;
+        padding: 0px var(--p20) 0 var(--p20);
+    };
     }
 
     .form-person {
         position: relative;
-        top: 0%;
+        top: 0%; display: none;
         right: 0%;
         z-index: 1;
     }
@@ -261,7 +375,7 @@
     .form-person-two {
         position: relative;
         top: 0%;
-        right: 0%;
+        right: 0%; display: none;
         z-index: 1;
     }
 
@@ -360,7 +474,20 @@
 }
 
 @media only screen and (max-width: 568px) {
-    
+    .tabs__blocks-ul button span {
+     
+        font-size: 10px;
+        
+    }
+    .tabs__blocks-ul button p {
+
+        font-size: 14px; }
+    .page .section-body {
+        padding: var(--p10);
+    }
+    .project-detail {
+        padding-top: 100px;
+    }
     .abs-elements.page-abs-elements-11 {
         width: 300px;
         top: -132px;
@@ -395,15 +522,16 @@
     }
 
     .tabs__blocks-page {
-        background-size: 100% 100%;
+        background-size: cover;
         padding: 20px;
         min-height: 340px;
         border-radius: var(--radius-two);
-        background-position: 100% 100%;
+        background-position: 15% 100%;
     }
 
     .tabs__blocks-ul ul li button {
         min-width: 155px;
+        height: 100%;
         padding: 15px;
     }
 

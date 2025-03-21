@@ -178,7 +178,7 @@ background-position: 20% 100%;
     .form-send-two {
         background-size: cover;
         background-position: 30% 100%;
-        background-image: url("http://127.0.0.1:5173/resources/img/form-one-two.png") !important;
+        background-image: url("/resources/img/form-one-two.png") !important;
     }
 }
 

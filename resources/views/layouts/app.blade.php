@@ -34,6 +34,30 @@
     wow.init();
 </script>
 
+<div class="loader-container">
+    <div class="loader">
+      <div class="note-0"></div>
+      <div class="note-1"></div>
+      <div class="note-2"></div>
+      <div class="note-3"></div>
+      <div class="note-4"></div>
+    </div>
+    <div class="status">Загрузка...</div>
+</div>
+  <script>
+    window.addEventListener('load', function() {
+      const container = document.querySelector('.loader-container');
+      // Задаём плавный переход для свойства opacity
+      container.style.transition = 'opacity 1s ease-out';
+      // Запускаем эффект затухания, устанавливая прозрачность в 0
+      container.style.opacity = '0';
+      // По окончании анимации (1 секунда) скрываем контейнер полностью
+      setTimeout(() => {
+        container.style.display = 'none';
+      }, 2000); // 1000 мс = 1 секунда
+    });
+  </script>
+  
 <body>
     <div id="app">
         <!-- Добавляем панель администратора, если пользователь авторизован и имеет статус admin -->

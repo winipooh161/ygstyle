@@ -1,6 +1,6 @@
 {
   "resources/css/adm.css": {
-    "file": "assets/adm-de83f12e.css",
+    "file": "assets/adm-f639913e.css",
     "isEntry": true,
     "src": "resources/css/adm.css"
   },
@@ -10,14 +10,18 @@
     "src": "resources/css/animate.css"
   },
   "resources/css/mobile.css": {
-    "file": "assets/mobile-cb608982.css",
+    "file": "assets/mobile-65dcc682.css",
     "isEntry": true,
     "src": "resources/css/mobile.css"
   },
   "resources/css/style.css": {
-    "file": "assets/style-335220c6.css",
+    "file": "assets/style-9409cbd8.css",
     "isEntry": true,
     "src": "resources/css/style.css"
+  },
+  "resources/img/form-one-two.png": {
+    "file": "assets/form-one-two-d3f182f8.png",
+    "src": "resources/img/form-one-two.png"
   },
   "resources/js/app.js": {
     "file": "assets/app-4ed993c7.js",

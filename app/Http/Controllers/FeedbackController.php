@@ -26,7 +26,11 @@ class FeedbackController extends Controller
     public function index()
     {
         $feedbacks = Feedback::orderBy('created_at', 'desc')->get();
-        return view('admin.feedback', compact('feedbacks'));
+        $meta_title       = 'ЮГСТИЛЬ - Отзывы для модерации';
+        $meta_description = 'Отметки отзывов для модерации в админке';
+        $meta_keywords    = 'отзывы, модерация';
+        $meta_author      = 'Название сайта';
+        return view('admin.feedback', compact('feedbacks', 'meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
     }
 
     // Удаление отзыва (админ)

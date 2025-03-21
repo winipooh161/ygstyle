@@ -75,4 +75,14 @@ class LoginController extends Controller
             $this->username().'.regex' => 'Номер телефона должен быть в формате: +7 (965) 222-44-24'
         ]);
     }
+
+    // Добавлено для передачи meta-тегов в форму входа
+    public function showLoginForm()
+    {
+        $meta_title       = 'Вход в систему';
+        $meta_description = 'Авторизация зарегистрированного пользователя на сайте';
+        $meta_keywords    = 'вход, логин, авторизация';
+        $meta_author      = 'Название сайта';
+        return view('auth.login', compact('meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
+    }
 }

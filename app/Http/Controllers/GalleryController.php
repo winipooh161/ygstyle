@@ -81,8 +81,14 @@ class GalleryController extends Controller
         
         // Для совместимости передаем allProjects
         $allProjects = $projects;
+
+        $meta_title       = 'ЮГСТИЛЬ - Галерея проектов';
+        $meta_description = 'Галерея проектов нашего сайта';
+        $meta_keywords    = 'галерея, проекты, фото';
+        $meta_author      = 'Название сайта';
         
         // Убедитесь, что $projectImages передается как массив с ключами-идентификаторами проектов
-        return view('gallery', compact('projectImages', 'allProjects', 'showProjectTitles'));
+        return view('gallery', compact('projectImages', 'allProjects', 'showProjectTitles',
+            'meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
     }
 }

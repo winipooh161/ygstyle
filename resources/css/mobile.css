@@ -178,11 +178,86 @@ background-position: 20% 100%;
     .form-send-two {
         background-size: cover;
         background-position: 30% 100%;
-        background-image: url("/resources/img/form-one-two.png") !important;
+        background-image: url("http://127.0.0.1:5173/resources/img/form-one-two.png") !important;
+    }
+    .form-bloks {
+        padding: var(--p20) 0px 50px;
+        display: flex
+    ;
+        align-content: center;
+        align-items: center;
+        gap: var(--p20);
+        flex-direction: column;
     }
 }
 
 @media only screen and (max-width: 768px) {
+    section#tabs .title h2 {
+        text-align: center;
+    }
+    .mySwiper-services swiper-slide {
+        padding-top: 35px;
+    }
+    .pc {
+        display: none;
+    }
+    .mb {
+          display: flex;
+    }
+    .services__card h5 {
+       
+        font-size: 18px;
+        line-height: 23px;
+       
+    }
+    ul.section-body_infocards__card-info__swiper p {
+    font-weight: 400;
+    text-align: left;
+    font-size: 22px;
+    line-height: 32px;
+}swiper-slide .section-body_infocards__card-info h4 {
+    font-family: Onest;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 28px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+ul.section-body_infocards__card-info__swiper h3 {
+    text-align: left;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 38px;
+}
+    .cards__form__swiper p {
+        font-family: Onest;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+    }
+    .form-send form h6 {
+        font-family: Onest;
+        font-weight: 500;
+        font-size: 25px;
+        padding-bottom: var(--p20);
+        line-height: 32px;
+        text-transform: math-auto;
+    }
+    .form-send__title p {
+        font-family: Onest;
+        padding-top: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    section#cards {
+        padding: 25px 0px;
+    }
+    .container {
+        padding: 10px;
+    }
     .project-meta.wow.fadeInDown {
         display: flex
     ;
@@ -419,6 +494,9 @@ background-position: 20% 100%;
     button.case_button,
     a.case_button {
         font-size: 16px;
+        width: 100%;
+        max-width: 100%;
+        border: 3px dashed var(--color);
     }
 
     .section-body-page {
@@ -578,7 +656,7 @@ background-position: 20% 100%;
     }
 
     .section-body-advantages ul li h3 {
-        font-size: 40px;
+        font-size: 31px;
     }
 
     .section-body-advantages ul {

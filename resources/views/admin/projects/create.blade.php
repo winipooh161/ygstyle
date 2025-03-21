@@ -111,9 +111,19 @@
             </div>
 
             <div class="flex-end" style="gap:15px; margin-top:20px;">
-                <button type="button" class="admin-btn admin-btn--link" onclick="window.location.href='{{ route('admin.projects') }}'">Отмена</button>
+                <button type="button" class="admin-btn admin-btn--link" onclick="window.location.href='{{ route('admin.projects') }}'">
+                    <!-- Arrow left SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 00-.708 0L4.5 7.793l6.146 6.147a.5.5 0 00.708-.708L5.707 8.5l5.647-5.646a.5.5 0 000-.708z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="btn-text"> Отмена</span>
+                </button>
                 <button type="submit" class="admin-btn">
-                    <i class="fas fa-save"></i> {{ isset($project) ? 'Обновить проект' : 'Создать проект' }}
+                    <!-- Save icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+                      <path d="M8 0L3 5v11h10V5L8 0zM4.5 6h7a.5.5 0 01.5.5v8a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-8a.5.5 0 01.5-.5z"/>
+                    </svg>
+                    <span class="btn-text"> {{ isset($project) ? 'Обновить проект' : 'Создать проект' }}</span>
                 </button>
             </div>
         </form>

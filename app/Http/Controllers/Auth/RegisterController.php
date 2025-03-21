@@ -78,4 +78,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    // Добавлено для передачи meta-тегов в форму регистрации
+    public function showRegistrationForm()
+    {
+        $meta_title       = 'Регистрация на ЮГСТИЛЬ';
+        $meta_description = 'Регистрация нового пользователя на сайте ЮГСТИЛЬ';
+        $meta_keywords    = 'регистрация, югстиль, пользователь';
+        $meta_author      = 'Название сайта';
+        return view('auth.register', compact('meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
+    }
 }

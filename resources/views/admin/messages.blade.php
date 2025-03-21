@@ -43,12 +43,25 @@
                                             data-id="{{ $message->id }}" 
                                             data-message="{{ $message->message }}"
                                             onclick="viewMessage(this)">
-                                            Просмотр
+                                            <!-- Eye icon SVG -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+                                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8z"/>
+                                              <path d="M8 5.5A2.5 2.5 0 108 10.5 2.5 2.5 0 008 5.5z"/>
+                                            </svg>
+                                            <span class="btn-text"> Просмотр</span>
                                         </button>
                                         <form action="{{ route('admin.messages.destroy', $message->id) }}" method="POST" onsubmit="return confirm('Вы уверены, что хотите удалить это сообщение?')">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm">Удалить</button>
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                <!-- Trash icon SVG -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+                                                  <path d="M5.5 5.5a.5.5 0 01.5.5v6a.5.5 0 01-1 0v-6a.5.5 0 01.5-.5zm5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0v-6a.5.5 0 01.5-.5z"/>
+                                                  <path fill-rule="evenodd" d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4H2.5a1 1 0 010-2h3a1 1 0 01.9-.546h2.2a1 1 0 01.9.546h3a1 1 0 011 1zM4.118 4l.82 9.576A1 1 0 005.93 15h4.14a1 1 0 00.992-.424L11.882 4H4.118z" clip-rule="evenodd"/>
+                                                  <path fill-rule="evenodd" d="M5.5 1a1 1 0 00-1 1v1h6V2a1 1 0 00-1-1h-4z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="btn-text"> Удалить</span>
+                                            </button>
                                         </form>
                                     </div>
                                 </td>

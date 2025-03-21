@@ -8,7 +8,27 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $meta_title ?? 'Админ панель' }}</title>
+
+    {{-- Новые meta-теги для SEO --}}
+    <meta name="description" content="{{ $meta_description ?? 'Описание сайта по умолчанию' }}">
+    <meta name="keywords" content="{{ $meta_keywords ?? 'ключевое слово1, ключевое слово2, ключевое слово3' }}">
+    <meta name="author" content="{{ $meta_author ?? 'Автор сайта' }}">
+    <meta name="robots" content="{{ $meta_robots ?? 'index, follow' }}">
+    <link rel="canonical" href="{{ $canonical_url ?? url()->current() }}">
+
+    {{-- Open Graph / Facebook --}}
+    <meta property="og:title" content="{{ $og_title ?? ($meta_title ?? 'Админ панель') }}">
+    <meta property="og:description" content="{{ $og_description ?? ($meta_description ?? 'Описание сайта по умолчанию') }}">
+    <meta property="og:image" content="{{ $og_image ?? asset('images/og-image.jpg') }}">
+    <meta property="og:url" content="{{ $og_url ?? url()->current() }}">
+    <meta property="og:type" content="{{ $og_type ?? 'website' }}">
+
+    {{-- Twitter --}}
+    <meta name="twitter:card" content="{{ $twitter_card ?? 'summary_large_image' }}">
+    <meta name="twitter:title" content="{{ $twitter_title ?? ($meta_title ?? 'Админ панель') }}">
+    <meta name="twitter:description" content="{{ $twitter_description ?? ($meta_description ?? 'Описание сайта по умолчанию') }}">
+    <meta name="twitter:image" content="{{ $twitter_image ?? asset('images/twitter-image.jpg') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -17,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
     <!-- Scripts -->
-    @vite([ 'resources/js/app.js', 'resources/css/adm.css', 'resources/css/animate.css'])
+    @vite([ 'resources/js/app.js', 'resources/css/adm.css', 'resources/css/animate.css', 'resources/css/mobile_adm.css'])
  
     <!-- Общие стили для админки подключены здесь -->
 </head>
@@ -40,7 +60,7 @@
 </div>
   <script>
     window.addEventListener('load', function() {
-      const container = document.querySelector('.container');
+      const container = document.querySelector('.loader-container');
       // Задаём плавный переход для свойства opacity
       container.style.transition = 'opacity 1s ease-out';
       // Запускаем эффект затухания, устанавливая прозрачность в 0
@@ -48,7 +68,7 @@
       // По окончании анимации (1 секунда) скрываем контейнер полностью
       setTimeout(() => {
         container.style.display = 'none';
-      }, 1000); // 1000 мс = 1 секунда
+      }, 2000); // 1000 мс = 1 секунда
     });
   </script>
   
@@ -125,7 +145,7 @@ window.addEventListener('click', function(event) {
     <script>
         function toggleAdminMenu() {
             const menu = document.getElementById('adminMenu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
     <script>

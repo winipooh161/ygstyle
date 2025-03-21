@@ -34,8 +34,12 @@ class AdminController extends Controller
         
         // Если есть модель Feedback для отзывов
         $feedbackCount = class_exists('App\Models\Feedback') ? Feedback::count() : 0;
+        $meta_title       = 'ЮГСТИЛЬ - Админ панель - Статистика';
+        $meta_description = 'Административная панель. Статистика сайта.';
+        $meta_keywords    = 'админ, статистика, пользователи, проекты';
+        $meta_author      = 'Название сайта';
 
-        return view('admin.dashboard', compact('usersCount', 'projectsCount', 'feedbackCount'));
+        return view('admin.dashboard', compact('usersCount', 'projectsCount', 'feedbackCount', 'meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
     }
 
     /**
@@ -46,19 +50,29 @@ class AdminController extends Controller
     public function projects()
     {
         $projects = Project::orderBy('id', 'desc')->get();
-        return view('admin.projects', compact('projects'));
+        $meta_title       = 'Управление проектами';
+        $meta_description = 'Управление проектами админки';
+        $meta_keywords    = 'админ, проекты, управление';
+        $meta_author      = 'Название сайта';
+
+        return view('admin.projects', compact('projects', 'meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
     }
 
     public function createProject(Request $request)
     {
+        $meta_title       = 'Создание/Редактирование проекта';
+        $meta_description = 'Создание/редактирование проекта';
+        $meta_keywords    = 'проект, создание, редактирование, админ';
+        $meta_author      = 'Название сайта';
+
         // Проверяем, если есть параметр edit, значит это редактирование
         if ($request->has('edit')) {
             $project = Project::findOrFail($request->edit);
-            return view('admin.projects.create', compact('project'));
+            return view('admin.projects.create', compact('project', 'meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
         }
         
         // Если нет параметра edit, значит это создание нового проекта
-        return view('admin.projects.create');
+        return view('admin.projects.create', compact('meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
     }
 
     public function storeProject(Request $request)

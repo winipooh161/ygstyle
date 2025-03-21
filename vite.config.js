@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/adm.css',
                 'resources/css/animate.css',
                 'resources/css/mobile.css',
+                'resources/css/mobile_adm.css',
             ],
             refresh: true,
         }),

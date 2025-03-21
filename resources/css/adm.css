@@ -619,3 +619,25 @@ body {
     align-items: center;
     flex-direction: column;
 }
+.custom-image-wrapper img {
+    width: 100%;
+}
+/* Адаптивность */
+@media (max-width: 576px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .admin-title, .dashboard-title, .section-title {
+        font-size: 1.8rem;
+    }
+    .admin-nav-tabs {
+        font-size: 0.9rem;
+    }
+    .admin-table th, .admin-table td {
+        padding: 8px 10px;
+    }
+    .admin-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

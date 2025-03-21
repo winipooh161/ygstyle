@@ -311,7 +311,12 @@ header ul a {
     line-height: 100%;
     text-decoration: none;
 }
-
+.pc {
+    display: flex;
+}
+.mb {
+    display: none;
+}
 .header__number {
     display: flex;
     gap: var(--g10);
@@ -841,6 +846,52 @@ swiper-slide .section-body_infocards__card-img img {
     background-image: url("http://127.0.0.1:5173/resources/img/services__cards/9.png");
 }
 
+
+
+swiper-container swiper-slide:nth-child(1) .services__card-blocks {
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/1.png");
+}
+
+swiper-container swiper-slide:nth-child(2) .services__card-blocks{
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/2.png");
+}
+
+swiper-container swiper-slide:nth-child(3) .services__card-blocks{
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/3.png");
+}
+
+swiper-container swiper-slide:nth-child(4) .services__card-blocks{
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/4.png");
+}
+
+swiper-container swiper-slide:nth-child(5) .services__card-blocks{
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/5.png");
+}
+
+swiper-container swiper-slide:nth-child(6) .services__card-blocks {
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/6.png");
+}
+
+swiper-container swiper-slide:nth-child(7) .services__card-blocks{
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/7.png");
+}
+
+swiper-container swiper-slide:nth-child(8) .services__card-blocks{
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/8.png");
+}
+
+swiper-container swiper-slide:nth-child(9) .services__card-blocks{
+    border-radius: var(--radius-two);
+    background-image: url("http://127.0.0.1:5173/resources/img/services__cards/9.png");
+}
 section#services .title {
     padding-bottom: 0px;
 }
@@ -4331,6 +4382,7 @@ table.table td {
 }
 
 .project-header__title .section-body-page__buttons {
+    padding-top: 30px;
     display: flex;
     justify-content: flex-start;
 }

@@ -60,6 +60,8 @@ Route::middleware('admin')->prefix('admin')->group(function() {
 
 Route::post('/submitTelegram', [TelegramController::class, 'store'])->name('telegram.store');
 
+Route::get('/thanks', [TelegramController::class, 'thanks'])->name('thanks');
+
 Auth::routes();
 
 Route::get('/welcome', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');

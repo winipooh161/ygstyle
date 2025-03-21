@@ -3,7 +3,7 @@
         <div class="form-send form-send-three">
             <div class="form-send__title wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">
                 <h2> <span class="color-text">Получите каталог</span>
-                    выполненных проектовв формате PDF</h2>
+                    выполненных проектов в формате PDF</h2>
                 <p>В каталоге:</p>
                 <ul>
                     <li>
@@ -17,7 +17,7 @@
                     </li>
                 </ul>
                 <div class="section-body-page__buttons" style="padding-top: 20px">
-                    <button class="blick" >Получить каталог с ценами <img src="{{ asset('img/icon/comment.svg ') }}" alt=""></button>
+                    <button class="blick" onclick="window.open('https://')" >Получить каталог с ценами <img src="{{ asset('img/icon/comment.svg ') }}" alt=""></button>
                 </div>
             </div>
             <div class="form-person-three  wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s">

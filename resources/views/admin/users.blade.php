@@ -45,8 +45,23 @@
                             </td>
                             <td>{{ $user->created_at ?? '2023-06-15' }}</td>
                             <td class="actions">
-                                <button class="admin-btn admin-btn--small edit-user-btn" data-id="{{ $user->id ?? '1' }}">Редактировать</button>
-                                <button class="admin-btn admin-btn--small admin-btn--danger delete-user-btn" data-id="{{ $user->id ?? '1' }}">Удалить</button>
+                                <button class="admin-btn admin-btn--small edit-user-btn" data-id="{{ $user->id ?? '1' }}">
+                                    <!-- Edit icon SVG -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+                                      <path d="M15.502 1.94a.5.5 0 00-.706 0L10.5 6.236l.707.707 4.296-4.296a.5.5 0 000-.707z"/>
+                                      <path fill-rule="evenodd" d="M6.854 7.146L2 12v1h1l4.854-4.854-.854-.854z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="btn-text"> Редактировать</span>
+                                </button>
+                                <button class="admin-btn admin-btn--small admin-btn--danger delete-user-btn" data-id="{{ $user->id ?? '1' }}">
+                                    <!-- Trash icon SVG (как в feedback) -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+                                      <path d="M5.5 5.5a.5.5 0 01.5.5v6a.5.5 0 01-1 0v-6a.5.5 0 01.5-.5zm5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0v-6a.5.5 0 01.5-.5z"/>
+                                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4H2.5a1 1 0 010-2h3a1 1 0 01.9-.546h2.2a1 1 0 01.9.546h3a1 1 0 011 1zM4.118 4l.82 9.576A1 1 0 005.93 15h4.14a1 1 0 00.992-.424L11.882 4H4.118z" clip-rule="evenodd"/>
+                                      <path fill-rule="evenodd" d="M5.5 1a1 1 0 00-1 1v1h6V2a1 1 0 00-1-1h-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="btn-text"> Удалить</span>
+                                </button>
                             </td>
                         </tr>
                         @endforeach

@@ -79,9 +79,21 @@ class TelegramController extends Controller
         // Оборачиваем отправку запроса в блок try-catch для обработки ошибок
         try {
             file_get_contents($url);
-            return response()->json(['status' => 'ok']);
+            return redirect()->route('thanks'); // Перенаправление на страницу благодарности
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
+    }
+    
+    /**
+     * Отображает страницу благодарности
+     */
+    public function thanks()
+    {
+        $meta_title       = 'Спасибо за заявку';
+        $meta_description = 'Спасибо за заявку. Мы свяжемся с Вами в ближайшее время.';
+        $meta_keywords    = 'спасибо, заявка, контакты';
+        $meta_author      = 'Название сайта';
+        return view('thanks', compact('meta_title', 'meta_description', 'meta_keywords', 'meta_author'));
     }
 }

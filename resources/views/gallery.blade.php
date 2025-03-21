@@ -1,0 +1,9 @@
+@extends('layouts.app')
+@section('content')
+    @include('layouts/header')
+    @include('gallery/page') 
+    @include('gallery/gallery')
+    @include('form/form-one')
+    @include('home/map')
+    @include('layouts/footer')
+@endsection
